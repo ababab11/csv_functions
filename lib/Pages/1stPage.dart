@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<String> functionList = [
     'Encode Change',
-    'Function 2',
+    'Merge Files',
     'Function 3',
     // Add more functions as needed
   ];
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.home, color: Colors.deepPurpleAccent), // アイコンの色を白に設定
+            icon: Icon(Icons.home, color: Colors.black54), // アイコンの色を白に設定
             onPressed: () {
               // 家アイコンが押されたときの処理
               print('Home Icon Pressed');
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           ),
           IconButton(
-            icon: Icon(Icons.settings, color: Colors.deepPurpleAccent), // アイコンの色を白に設定
+            icon: Icon(Icons.settings, color: Colors.black54), // アイコンの色を白に設定
             onPressed: () {
               // 歯車アイコンが押されたときの処理
               print('Settings Icon Pressed');
