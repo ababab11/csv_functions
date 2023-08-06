@@ -16,14 +16,14 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'CSV FUNCTIONS',
+      title: 'CSV FUNCTIONS(utf8 Only)',
       theme: ThemeData(
 
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'CSV FUNCTIONS'),
+      home: const MyHomePage(title: 'CSV FUNCTIONS(utf8 Only)'),
     );
   }
 }

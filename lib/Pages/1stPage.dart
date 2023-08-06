@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:split_view/split_view.dart';
 
+import '../Functions/fileEncoder.dart';
+import '../Functions/marge.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -17,7 +20,13 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<String> functionList = [
     'Encode Change',
     'Merge Files',
-    'Function 3',
+    'Split large file',
+    'Sort Columns',
+    'Vlookup',
+    'Count',
+    'Remove headers',
+    'Filter rows',
+
     // Add more functions as needed
   ];
 
@@ -32,14 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
         return Container(
           color: Colors.red,
           child: Center(
-            child: Text('Function 1 Widget'),
+            child: EncodingConverter(),
           ),
         );
       case 1:
         return Container(
           color: Colors.white10,
           child: Center(
-            child: Text('Function 2 Widget'),
+            child: MergeCsv(),
           ),
         );
       case 2:
@@ -60,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 45.0,
         title: Text(widget.title),
         backgroundColor: Colors.green, // APPバーの背景色を緑に変更
         bottom: PreferredSize(
